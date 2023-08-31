@@ -1,5 +1,4 @@
 local opt = vim.opt
-local cmd = vim.cmd
 local g = vim.g
 
 opt.cursorline = true    -- Highlight line with cursor
@@ -12,3 +11,4 @@ opt.tabstop = 4          -- 1 tab == 4 spaces
 opt.smartindent = true   -- autoindent new lines
 
 g.mapleader = ','
+g.maplocalleader = ','

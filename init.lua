@@ -6,4 +6,3 @@ vim.o.runtimepath = config_dir .. ',' .. config_dir .. '/lua,' .. vim.o.runtimep
 require('plugins')
 require('keymaps')
 require('settings')
-

@@ -1,6 +1,5 @@
 vim.cmd [[packadd packer.nvim]]
 
-require('nvim-tree').setup()
 require('bufferline').setup {}
 require('lualine').setup {
     options = {
@@ -32,6 +31,7 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional
         },
     }
+    use 'nvim-tree/nvim-web-devicons'
     use 'Chiel92/vim-autoformat'
 
     use {
@@ -49,5 +49,22 @@ return require('packer').startup(function(use)
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
+    }
+
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+
+    use 'windwp/nvim-ts-autotag'
+    use 'windwp/nvim-autopairs'
+
+    use 'nvimdev/lspsaga.nvim'
+    use 'dinhhuy258/git.nvim'
+    use 'lewis6991/gitsigns.nvim'
+
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     }
 end)
