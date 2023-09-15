@@ -17,6 +17,7 @@ map('n', 'C-r', 'gg=G<CR>', default_opts)          -- format code
 map('n', '<S-e>', ':tabnext<CR>', default_opts)
 map('n', '<S-q>', ':tabprevious<CR>', default_opts)
 map('n', '<S-w>', ':tabclose<CR>', default_opts)
+map('n', '<C-w>', '<C-w>w', default_opts)
 
 -- Arrows off for navigation. Use hjkl
 map('', '<up>', ':echoe "Use k"<CR>', { noremap = true, silent = false })

@@ -55,3 +55,8 @@ nvim_lsp.tailwindcss.setup {
     on_attach = on_attach,
     capabilities = capabilities
 }
+
+nvim_lsp.pylsp.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
