@@ -10,13 +10,12 @@ map('n', '<C-/>', ':Commentary<CR>', default_opts) -- Comment line on ctrl + /
 map('n', '<C-s>', ':w<CR>', default_opts)          -- format code and save on ctrl + s
 map('i', '<C-s>', '<esc>:w<CR>', default_opts)
 map('n', 'qq', ':wq<CR>', default_opts)            -- format code and save on ctrl + s and quite
+map('n', 'qt', ':bd<CR>', default_opts)            -- format code and save on ctrl + s and close current buffer
 map('i', 'qq', '<esc>:wq<CR>', default_opts)       -- format code and save on ctrl + s and quite
+map('i', 'qt', '<esc>:bd<CR>', default_opts)       -- format code and save on ctrl + s and close current buffer
 map('n', 'C-r', 'gg=G<CR>', default_opts)          -- format code
 
 -- tabs
-map('n', '<S-e>', ':tabnext<CR>', default_opts)
-map('n', '<S-q>', ':tabprevious<CR>', default_opts)
-map('n', '<S-w>', ':tabclose<CR>', default_opts)
 map('n', '<C-w>', '<C-w>w', default_opts)
 
 -- Arrows off for navigation. Use hjkl
