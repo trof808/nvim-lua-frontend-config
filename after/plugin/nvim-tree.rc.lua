@@ -31,8 +31,8 @@ nt.setup({
     view = {
         mappings = {
             list = {
-                { key = 'c', action = 'copy_file_to', action_cb = copy_file_to },
-                -- { key = 'mv', action = 'move_file_to', action_cb = move_file_to }
+                { key = 'c',  action = 'copy_file_to', action_cb = copy_file_to },
+                { key = 'mv', action = 'move_file_to', action_cb = move_file_to }
             }
         }
     }
