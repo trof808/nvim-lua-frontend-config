@@ -5,7 +5,6 @@ local default_opts = { noremap = true, silent = true }
 -- <C-l> remove search highlights
 
 map('i', 'jj', '<Esc>', { noremap = true })
--- map('n', '<C-c>', '"+y', { default_opts })
 
 map('n', '<C-/>', ':Commentary<CR>', default_opts) -- Comment line on ctrl + /
 map('n', '<C-s>', ':w<CR>', default_opts)          -- format code and save on ctrl + s
