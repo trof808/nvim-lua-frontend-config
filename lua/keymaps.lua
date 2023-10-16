@@ -4,16 +4,19 @@ local default_opts = { noremap = true, silent = true }
 -- Useful default keymaps
 -- <C-l> remove search highlights
 
+-- Commentary
+-- visual mode + gc - comment block of code
+-- gcc - comment line
+
 map('i', 'jj', '<Esc>', { noremap = true })
 
-map('n', '<C-/>', ':Commentary<CR>', default_opts) -- Comment line on ctrl + /
-map('n', '<C-s>', ':w<CR>', default_opts)          -- format code and save on ctrl + s
+map('n', '<C-s>', ':w<CR>', default_opts)    -- format code and save on ctrl + s
 map('i', '<C-s>', '<esc>:w<CR>', default_opts)
-map('n', 'qq', ':wq<CR>', default_opts)            -- format code and save on ctrl + s and quite
-map('n', 'qt', ':bd<CR>', default_opts)            -- format code and save on ctrl + s and close current buffer
-map('i', 'qq', '<esc>:wq<CR>', default_opts)       -- format code and save on ctrl + s and quite
-map('i', 'qt', '<esc>:bd<CR>', default_opts)       -- format code and save on ctrl + s and close current buffer
-map('n', 'C-r', 'gg=G<CR>', default_opts)          -- format code
+map('n', 'qq', ':wq<CR>', default_opts)      -- format code and save on ctrl + s and quite
+map('n', 'qt', ':bd<CR>', default_opts)      -- format code and save on ctrl + s and close current buffer
+map('i', 'qq', '<esc>:wq<CR>', default_opts) -- format code and save on ctrl + s and quite
+map('i', 'qt', '<esc>:bd<CR>', default_opts) -- format code and save on ctrl + s and close current buffer
+map('n', 'C-r', 'gg=G<CR>', default_opts)    -- format code
 
 -- tabs
 map('n', '<C-w>', '<C-w>w', default_opts)
@@ -30,3 +33,11 @@ map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', default_opts)
 
 -- Nvim tree
 map('n', '<C-h>', ':NvimTreeToggle<CR>', default_opts)
+
+-- Zen mode
+map('n', 'zm', ':ZenMode<CR>', default_opts)
+map('i', 'zm', '<esc>:ZenMode<CR>', default_opts)
+
+-- Gitsigns
+map('n', 'gn', ':Gitsigns next_hunk<CR>', default_opts)
+map('n', 'gr', ':Gitsigns reset_hunk<CR>', default_opts)

@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional
         },
     }
+    use 'folke/zen-mode.nvim'
     use 'nvim-tree/nvim-web-devicons'
     use 'Chiel92/vim-autoformat'
 
@@ -67,4 +68,6 @@ return require('packer').startup(function(use)
         "nvim-telescope/telescope-file-browser.nvim",
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     }
+
+    use 'David-Kunz/jester'
 end)
