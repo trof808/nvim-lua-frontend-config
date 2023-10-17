@@ -10,10 +10,12 @@ require('lualine').setup {
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    use {
-        'svrana/neosolarized.nvim',
-        requires = { 'tjdevries/colorbuddy.nvim' }
-    }
+    -- use {
+    -- 'svrana/neosolarized.nvim',
+    -- requires = { 'tjdevries/colorbuddy.nvim' }
+    -- }
+
+    use { "ellisonleao/gruvbox.nvim" }
 
     use 'chrisbra/vim-commentary'
 

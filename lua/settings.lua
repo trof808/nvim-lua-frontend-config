@@ -1,6 +1,9 @@
 local opt = vim.opt
 local g = vim.g
 
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
+
 opt.cursorline = true    -- Highlight line with cursor
 opt.number = true        -- show line number
 opt.termguicolors = true -- color scheme
