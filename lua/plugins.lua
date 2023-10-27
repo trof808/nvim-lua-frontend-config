@@ -10,11 +10,6 @@ require('lualine').setup {
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    -- use {
-    -- 'svrana/neosolarized.nvim',
-    -- requires = { 'tjdevries/colorbuddy.nvim' }
-    -- }
-
     use { "ellisonleao/gruvbox.nvim" }
 
     use 'chrisbra/vim-commentary'
@@ -71,5 +66,9 @@ return require('packer').startup(function(use)
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     }
 
+    -- PLugin to run tests with jest
     use 'David-Kunz/jester'
+
+    -- Plugin to collapse code blocks
+    use 'anuvyklack/pretty-fold.nvim'
 end)
