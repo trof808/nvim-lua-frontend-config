@@ -37,7 +37,3 @@ map('n', '<C-h>', ':NvimTreeToggle<CR>', default_opts)
 -- Zen mode
 map('n', 'zm', ':ZenMode<CR>', default_opts)
 map('i', 'zm', '<esc>:ZenMode<CR>', default_opts)
-
--- Gitsigns
-map('n', 'gn', ':Gitsigns next_hunk<CR>', default_opts)
-map('n', 'gr', ':Gitsigns reset_hunk<CR>', default_opts)
