@@ -45,6 +45,14 @@ nvim_lsp.lua_ls.setup {
         }
     }
 }
+
+
+-- css settings
+nvim_lsp.cssls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
 -- TypeScript settings
 nvim_lsp.tsserver.setup {
     on_attach = on_attach,
@@ -62,9 +70,32 @@ nvim_lsp.pylsp.setup {
 }
 
 nvim_lsp.eslint.setup {
-    on_attach = on_attach,
+    -- on_attach = on_attach,
+    on_attach = function(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = true
+        if client.server_capabilities.documentFormattingProvider then
+            local au_lsp = vim.api.nvim_create_augroup("eslint_lsp", { clear = true })
+            vim.api.nvim_create_autocmd("BufWritePre", {
+                pattern = "*",
+                callback = function()
+                    vim.lsp.buf.format({ async = true })
+                end,
+                group = au_lsp,
+            })
+        end
+    end,
     capabilities = capabilities
 }
+
+-- nvim_lsp.jsonls.setup {
+-- on_attach = on_attach,
+-- capabilities = capabilities
+-- }
+
+-- nvim_lsp.json.setup {
+-- on_attach = on_attach,
+-- capabilities = capabilities
+-- }
 
 nvim_lsp.pyright.setup {
     on_attach = on_attach,

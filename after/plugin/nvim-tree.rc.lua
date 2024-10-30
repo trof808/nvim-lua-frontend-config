@@ -25,9 +25,6 @@ local function move_file_to(node)
 end
 
 nt.setup({
-    filters = {
-        dotfiles = true,
-    },
     view = {
         mappings = {
             list = {
